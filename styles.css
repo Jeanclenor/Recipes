@@ -1,0 +1,123 @@
+*, *::after, *::before {
+    box-sizing: border-box;
+}
+
+@import "https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css";
+
+:root {
+    --bgc-bullet: #66b2b2;
+    --font-main: 'Montserrat', sans-serif;
+    --font-head: 'IBM Plex Serif', serif;
+    --bgc-checkbox: #343a40;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: var(--font-main);
+    background-color: #f8f9fa;
+}
+
+.container {
+    width: 90%;
+    margin: 0 auto;
+    padding: 1rem;
+}
+
+h1 {
+    font-family: var(--font-head);
+    font-size: 3rem;
+    line-height: 3.5rem;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    box-shadow: 0px 0px 20px var(--bgc-bullet);
+    margin: 1rem 0;
+    display: block;
+}
+
+input[type='checkbox'] {
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    border: 2px solid #ced4da;
+    vertical-align: middle;
+}
+
+input[type='checkbox']:checked {
+    background: var(--bgc-checkbox);
+}
+
+label, p {
+    line-height: 1.5rem;
+}
+
+.header-container, .section-2, .section-3 {
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.section-1 p, .section-2-content {
+    width: 100%;
+}
+
+.sidebar {
+    display: none;
+}
+
+ol {
+    list-style: none;
+    counter-reset: item;
+    padding: 0;
+}
+
+li {
+    counter-increment: item;
+    margin: 0 0 2rem 0;
+    position: relative;
+    padding-left: 5em;
+}
+
+li::before {
+    content: counter(item);
+    background: var(--bgc-bullet);
+    border-radius: 10px;
+    color: white;
+    width: 2em;
+    height: 2em;
+    position: absolute;
+    left: 0;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@media (min-width: 700px) {
+    body {
+        font-size: 1.25rem;
+    }
+    .container {
+        width: 80%;
+    }
+    .section-1 p, .section-2-content, .section-3 {
+        width: 100%;
+    }
+    .section-2 {
+        padding: 1.5em 0;
+        display: flex;
+        justify-content: space-between;
+        flex-direction: row-reverse;
+    }
+    .ingredients {
+        width: 50%;
+    }
+}
+
+img{
+width:40%;
+height:30%;
+}
